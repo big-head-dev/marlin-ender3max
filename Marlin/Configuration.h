@@ -1517,7 +1517,7 @@
  *     |    [-]    |
  *     O-- FRONT --+
  */
-#define NOZZLE_TO_PROBE_OFFSET { 50, -15, 0 }
+#define NOZZLE_TO_PROBE_OFFSET { 48, -8, 0 }
 
 // Most probes should stay away from the edges of the bed, but
 // with NOZZLE_AS_PROBE this can be negative for a wider probing area.
@@ -1732,11 +1732,11 @@
 #define Y_BED_SIZE 300
 
 // Travel limits (linear=mm, rotational=°) after homing, corresponding to endstop positions.
-#define X_MIN_POS -15
-#define Y_MIN_POS -15
+#define X_MIN_POS 0
+#define Y_MIN_POS 0
 #define Z_MIN_POS 0
-#define X_MAX_POS 285
-#define Y_MAX_POS 285
+#define X_MAX_POS 300
+#define Y_MAX_POS 300 // -10 for the smaller plate
 #define Z_MAX_POS 310
 //#define I_MIN_POS 0
 //#define I_MAX_POS 50
@@ -1931,7 +1931,7 @@
  */
 #define PREHEAT_BEFORE_LEVELING   // ENABLE FOR BLTOUCH
 #if ENABLED(PREHEAT_BEFORE_LEVELING)
-  //#define LEVELING_NOZZLE_TEMP 120   // (°C) Only applies to E0 at this time
+  // #define LEVELING_NOZZLE_TEMP 120   // (°C) Only applies to E0 at this time
   #define LEVELING_BED_TEMP     50
 #endif
 
@@ -2256,8 +2256,8 @@
 #define PREHEAT_1_FAN_SPEED    0 // Value from 0 to 255
 
 #define PREHEAT_3_LABEL       "PETG"
-#define PREHEAT_3_TEMP_HOTEND  240
-#define PREHEAT_3_TEMP_BED     80
+#define PREHEAT_3_TEMP_HOTEND  225
+#define PREHEAT_3_TEMP_BED     75
 #define PREHEAT_3_TEMP_CHAMBER 35
 #define PREHEAT_3_FAN_SPEED    0 // Value from 0 to 255
 
